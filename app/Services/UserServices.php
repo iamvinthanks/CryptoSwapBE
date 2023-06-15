@@ -36,9 +36,16 @@ class UserServices{
             $this->walletRepository->StoreWallet($data,$res['user']);
             $this->passcodeRepository->StorePasscode($user_data,$res['user']);
             DB::commit();
-        } catch (\IEXBase\TronAPI\Exception\TronException $e) {
+        } catch (\Exception  $e) {
             DB::rollback();
-            exit($e->getMessage());
+            $errorCode = $e->errorInfo[1];
+            if($errorCode == 1062){
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'User already exists',
+                    'data' => []
+                ],201);
+            }
         }
         return response()->json([
             'status' => 'success',

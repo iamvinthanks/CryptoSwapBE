@@ -7,16 +7,16 @@ use Illuminate\Support\Facades\Hash;
 
 class UserRepository {
     public function CreateUser($data){
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password'])
-         ]);
-        $token = $user->createToken('auth_token')->plainTextToken;
-        $response = [
-            'user' => $user->id,
-            'access_token' => $token,
-        ];
+            $user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password'])
+             ]);
+            $token = $user->createToken('auth_token')->plainTextToken;
+            $response = [
+                'user' => $user->id,
+                'access_token' => $token,
+            ];
         return $response;
     }
 }

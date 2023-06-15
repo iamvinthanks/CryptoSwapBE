@@ -16,4 +16,8 @@ class WalletRepository {
         ]);
         return true;
     }
+    public function GetWallet($user){
+        $wallet = UserWallet::where('user_id',$user)->select('trx_address','bsc_address')->first();
+        return $wallet;
+    }
 }

@@ -18,5 +18,7 @@ Route::post('/register', [App\Http\Controllers\API\AuthController::class, 'regis
 //API route for login user
 Route::post('/login', [App\Http\Controllers\API\AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-
+});
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/user/balance', [App\Http\Controllers\API\WalletController::class, 'CryptoBalance']);
 });

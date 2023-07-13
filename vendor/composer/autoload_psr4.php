@@ -14,7 +14,7 @@ return array(
     'Web3p\\RLP\\' => array($vendorDir . '/web3p/rlp/src'),
     'Web3p\\EthereumUtil\\' => array($vendorDir . '/web3p/ethereum-util/src'),
     'Web3p\\EthereumTx\\' => array($vendorDir . '/web3p/ethereum-tx/src'),
-    'Web3\\' => array($vendorDir . '/iexbase/web3.php/src'),
+    'Web3\\' => array($vendorDir . '/iexbase/web3.php/src', $vendorDir . '/web3p/web3.php/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
     'Tests\\' => array($baseDir . '/tests'),
     'Termwind\\' => array($vendorDir . '/nunomaduro/termwind/src'),

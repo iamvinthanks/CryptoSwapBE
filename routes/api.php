@@ -21,4 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user/balance', [App\Http\Controllers\API\WalletController::class, 'CryptoBalance']);
+    Route::post('/swap/confirmation', [App\Http\Controllers\API\CryposwapController::class, 'confirmationBeforeswap']);
+    Route::post('/swap/crypto-to-idr', [App\Http\Controllers\API\CryposwapController::class, 'cryptoToidr']);
 });
+Route::post('/swap/troncallback', [App\Http\Controllers\API\CryposwapController::class, 'tronCallback']);

@@ -16,7 +16,7 @@ class EncryptionServices
         return $encrypted;
 
     }
-    public function decrypt($data,$key){
+    public function decrypt($encrypted,$key){
         //decrypt
         $c = base64_decode($encrypted);
         $cipher = "aes-256-cbc";
@@ -27,7 +27,7 @@ class EncryptionServices
         $original_plaintext = openssl_decrypt($ciphertext_raw, $cipher, $key, OPENSSL_RAW_DATA, $iv);
         $calcmac = hash_hmac('sha256', $ciphertext_raw, $key, true);
         if (hash_equals($hmac, $calcmac)) {
-        dd($original_plaintext);
+        return $original_plaintext;
         }
         dd('data not match');
     }

@@ -13,11 +13,11 @@ class WalletController extends Controller
     public function CryptoBalance(){
         $user = auth()->user()->id;
         $res = $this->walletServices->CryptoBalance($user);
-
         return response()->json([
             'success' => true,
             'message' => 'Crypto Balance',
             'data' => $res
         ], 200);
     }
+
 }

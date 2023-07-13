@@ -237,6 +237,7 @@ class ComposerStaticInit1eff0317762835d76ae205485f358c0a
         'Web3\\' => 
         array (
             0 => __DIR__ . '/..' . '/iexbase/web3.php/src',
+            1 => __DIR__ . '/..' . '/web3p/web3.php/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -695,13 +696,21 @@ class ComposerStaticInit1eff0317762835d76ae205485f358c0a
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\UserPasscode' => __DIR__ . '/../..' . '/app/Models/UserPasscode.php',
+        'App\\Models\\UserWallet' => __DIR__ . '/../..' . '/app/Models/UserWallet.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Repositories\\PasscodeRepository' => __DIR__ . '/../..' . '/app/Repositories/PasscodeRepository.php',
         'App\\Repositories\\UserRepository' => __DIR__ . '/../..' . '/app/Repositories/UserRepository.php',
+        'App\\Repositories\\WalletRepository' => __DIR__ . '/../..' . '/app/Repositories/WalletRepository.php',
+        'App\\Services\\CryptoRateServices' => __DIR__ . '/../..' . '/app/Services/CryptoRateServices.php',
+        'App\\Services\\CryptoswapServices' => __DIR__ . '/../..' . '/app/Services/CryptoswapServices.php',
+        'App\\Services\\EncryptionServices' => __DIR__ . '/../..' . '/app/Services/EncryptionServices.php',
         'App\\Services\\UserServices' => __DIR__ . '/../..' . '/app/Services/UserServices.php',
+        'App\\Services\\WalletServices' => __DIR__ . '/../..' . '/app/Services/WalletServices.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BIP\\BIP44' => __DIR__ . '/..' . '/fenguoz/minter-php-bip-44/src/BIP/BIP44.php',
         'BIP\\HDKey' => __DIR__ . '/..' . '/fenguoz/minter-php-bip-44/src/BIP/HDKey.php',

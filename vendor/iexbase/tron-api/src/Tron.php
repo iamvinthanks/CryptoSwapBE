@@ -1386,4 +1386,7 @@ class Tron implements TronInterface
             'value' =>  $token_id
         ]);
     }
+    public function getTransactionAddress(string $address){
+        return $this->manager->request('/v1/accounts/'.$address.'/transactions',[],'get');
+    }
 }

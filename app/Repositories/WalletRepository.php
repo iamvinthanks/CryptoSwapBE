@@ -20,4 +20,8 @@ class WalletRepository {
         $wallet = UserWallet::where('user_id',$user)->select('trx_address','bsc_address')->first();
         return $wallet;
     }
+    public function GetPrivate($user){
+        $wallet = UserWallet::where('user_id',$user)->select('trx_private_key','bsc_private_key')->first();
+        return $wallet;
+    }
 }

@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '1249e8edafe79a8b00f9e26642c2f0b763313528',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -463,12 +463,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '1249e8edafe79a8b00f9e26642c2f0b763313528',
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
@@ -1454,6 +1454,17 @@
             'install_path' => __DIR__ . '/../web3p/rlp',
             'aliases' => array(),
             'reference' => '1653af23142863b490bdf22c6d0335bdb588c983',
+            'dev_requirement' => false,
+        ),
+        'web3p/web3.php' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../web3p/web3.php',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => 'cede0cc410363ec6182a732e98bb017e421352f4',
             'dev_requirement' => false,
         ),
         'webmozart/assert' => array(

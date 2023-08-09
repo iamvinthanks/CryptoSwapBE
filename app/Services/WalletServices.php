@@ -106,7 +106,7 @@ class WalletServices {
                     'transaction_total'=> $amount * $cryptorate['crypto_price'],
                     'transaction_hash'=> $result['txID'],
                     'from_address'=> $wallet['trx_address'],
-                    'transaction_status'=> 'on progress',
+                    'transaction_status'=> 'pending',
                 ];
                 $saveData = $this->userTransactionRepository->StoreTransaction($data,auth()->user()->id);
             }catch(\IEXBase\TronAPI\Exception\TronException $e){

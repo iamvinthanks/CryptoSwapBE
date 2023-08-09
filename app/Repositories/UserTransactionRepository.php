@@ -35,8 +35,9 @@ Class UserTransactionRepository {
             if($gettxid[0]->transaction_status == 'on progress'){
                 $checkwallet = UserWallet::where('user_id',$gettxid[0]['user_id'])->first();
                 if($checkwallet['trx_address'] == $gettxid[0]['from_address']){
-                    $gettxid[0]->transaction_status = 'success';
+                    $gettxid[0]->transaction_status = 'on progress';
                     $gettxid[0]->save();
+
                     return true;
                 }
                 return false;
